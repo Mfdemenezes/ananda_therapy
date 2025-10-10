@@ -1,0 +1,853 @@
+{
+  "name": "My workflow 3",
+  "nodes": [
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1X-IT40QoHImkxDBhrH39lrZj_rd-lQT0T0FDF3henHs",
+          "mode": "list",
+          "cachedResultName": "anamnesia_massagem"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Página1"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Qual é o seu nome completo?": "={{ $json['💆‍♀️ Qual é o seu nome completo?'] }}",
+            "Qual o seu e-mail?": "={{ $json['📧 Qual o seu e-mail?'] }}",
+            "Qual a sua data de nascimento?": "={{ $json['🎂 Qual a sua data de nascimento?'] }}",
+            "Qual o seu telefone/WhatsÁpp": "={{ $json['📱 Qual o seu telefone/WhatsApp?'] }}",
+            "Qual a sua profissão?": "={{ $json['💼 Qual a sua profissão?'] }}",
+            "Possui alguma doença crônica?": "={{ $json['🥼 Possui alguma doença crônica?'] }}",
+            "Faz uso de medicamento atualmente?": "={{ $json['💊 Faz uso de medicamento atualmente?'] }}",
+            "Possui problemas cardiacos?": "={{ $json['❤️ Possui problemas cardíacos?'][0] }}",
+            "Possui problemas de circulação": "={{ $json['🩸 Possui problemas de circulação?'][0] }}",
+            "Tem ou teve câncer?": "={{ $json['🎗️ Tem ou teve câncer?'] }}",
+            "Tem alguma alergia na pele?": "={{ $json['🌸 Tem alguma alergia na pele?'] }}",
+            "Está gestante, se sim diga quantos meses?": "={{ $json['🤰 Está gestante? Se sim, quantos meses?'] }}",
+            "Sente dores ou tensões frequentemente?": "={{ $json['😣 Sente dores ou tensões frequentemente?'][0] }}",
+            "Alguma cirurgia recente? Se sim me diz onde e a quanto tempo foi feita": "={{ $json['🥼 Alguma cirurgia recente? Onde e há quanto tempo?'] }}",
+            "Dorme bem?": "={{ $json['😴 Dorme bem?'] }}",
+            "Pratica atividade física? Se sim me diga qual é e qual a frequência.": "={{ $json['🏃‍♀️ Pratica atividade física? Qual e com que frequência?'] }}",
+            "Nivel de stress.": "={{ $json['😰 Nível de stress'] }}",
+            "o que você espera da massagem agendada?": "={{ $json['✨ O que você espera da massagem agendada?'] }}",
+            "Alguma observação não mencionada.": "={{ $json['📝 Alguma observação não mencionada?'] }}",
+            "submittedAt": "={{ $json.submittedAt }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Qual é o seu nome completo?",
+              "displayName": "Qual é o seu nome completo?",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Qual o seu e-mail?",
+              "displayName": "Qual o seu e-mail?",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Qual a sua data de nascimento?",
+              "displayName": "Qual a sua data de nascimento?",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Qual o seu telefone/WhatsÁpp",
+              "displayName": "Qual o seu telefone/WhatsÁpp",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Qual a sua profissão?",
+              "displayName": "Qual a sua profissão?",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Possui alguma doença crônica?",
+              "displayName": "Possui alguma doença crônica?",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Faz uso de medicamento atualmente?",
+              "displayName": "Faz uso de medicamento atualmente?",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Possui problemas cardiacos?",
+              "displayName": "Possui problemas cardiacos?",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Possui problemas de circulação",
+              "displayName": "Possui problemas de circulação",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Tem ou teve câncer?",
+              "displayName": "Tem ou teve câncer?",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Tem alguma alergia na pele?",
+              "displayName": "Tem alguma alergia na pele?",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Está gestante, se sim diga quantos meses?",
+              "displayName": "Está gestante, se sim diga quantos meses?",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Alguma cirurgia recente? Se sim me diz onde e a quanto tempo foi feita",
+              "displayName": "Alguma cirurgia recente? Se sim me diz onde e a quanto tempo foi feita",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Sente dores ou tensões frequentemente?",
+              "displayName": "Sente dores ou tensões frequentemente?",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Dorme bem?",
+              "displayName": "Dorme bem?",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Pratica atividade física? Se sim me diga qual é e qual a frequência.",
+              "displayName": "Pratica atividade física? Se sim me diga qual é e qual a frequência.",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Nivel de stress.",
+              "displayName": "Nivel de stress.",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "o que você espera da massagem agendada?",
+              "displayName": "o que você espera da massagem agendada?",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Alguma observação não mencionada.",
+              "displayName": "Alguma observação não mencionada.",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "submittedAt",
+              "displayName": "submittedAt",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.6,
+      "position": [
+        -816,
+        -144
+      ],
+      "id": "d8ea0528-fcf2-4b76-b33b-4273cee1531b",
+      "name": "Salvar no Google Sheets1",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "jruNb05WKKfHJnLY",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "download",
+        "fileId": {
+          "__rl": true,
+          "value": "1tHekRBl4ntKAC4Ewk4htiSswprOwMPC5",
+          "mode": "list",
+          "cachedResultName": "Manual_Massagem_Ananda_Therapy.pdf"
+        },
+        "options": {
+          "binaryPropertyName": "data"
+        }
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        -592,
+        -144
+      ],
+      "id": "5a2f5dbb-9460-48e5-a569-4324b3100004",
+      "name": "Baixar Manual PDF1",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "Ukh2btvHvkVwtVjy",
+          "name": "Google Drive account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $json['Qual o seu e-mail?'] }}",
+        "subject": "✨ Sua anamnese foi concluída - Ananda Therapy",
+        "message": "=Olá {{ $json['Qual é o seu nome completo?'] }}! 🌿\n\nMuito obrigada por preencher o formulário de anamnese. Agora conheço um pouco mais sobre você e posso preparar uma sessão personalizada!\n\n🔎 Em anexo você encontrará um manual com orientações importantes para aproveitar melhor sua massagem.\n\n💚 Estou ansiosa para nosso encontro!\n\n📱 WhatsApp: (24) 99882-6028\n📷 Instagram: @ananda.therapy_\n\nCom carinho,\nAnanda Vianna",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        -368,
+        -144
+      ],
+      "id": "8112a837-38cd-4fcb-8026-e541b540de1b",
+      "name": "Enviar E-mail Cliente1",
+      "webhookId": "9bbd3bcc-2c4d-40f2-a742-c7cdf7e1631d",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "H2eiD0EykGu5gc7K",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "=7868529582",
+        "text": "=🌿 NOVA ANAMNESE RECEBIDA 🌿\n\n👤 CLIENTE: {{ $('Formulário Anamnese1').item.json['💆‍♀️ Qual é o seu nome completo?'] }}\n\n📅 Data de Nascimento: {{ $('Formulário Anamnese1').item.json['🎂 Qual a sua data de nascimento?'] }}\n\n📱 Telefone/WhatsApp: {{ $('Formulário Anamnese1').item.json['📱 Qual o seu telefone/WhatsApp?'] }}\n\n📧 E-mail: {{ $('Formulário Anamnese1').item.json['📧 Qual o seu e-mail?'] }}\n\n💼 Profissão: {{ $('Formulário Anamnese1').item.json['💼 Qual a sua profissão?'] }}\n\n━━━━━━━━━━━━━━━━━━━━\n📋 INFORMAÇÕES DE SAÚDE\n━━━━━━━━━━━━━━━━━━━━\n\n🥼 Doença crônica: {{ $('Formulário Anamnese1').item.json['🥼 Possui alguma doença crônica?'] }}\n\n💊 Medicamentos: {{ $('Formulário Anamnese1').item.json['💊 Faz uso de medicamento atualmente?'] }}\n\n❤️ Problemas cardíacos: {{ $('Formulário Anamnese1').item.json['❤️ Possui problemas cardíacos?'] }}\n\n🩸 Circulação: {{ $('Formulário Anamnese1').item.json['🩸 Possui problemas de circulação?'] }}\n\n🎗️ Câncer: {{ $('Formulário Anamnese1').item.json['🎗️ Tem ou teve câncer?'] }}\n\n🌸 Alergia na pele: {{ $('Formulário Anamnese1').item.json['🌸 Tem alguma alergia na pele?'] }}\n\n🤰 Gestante: {{ $('Formulário Anamnese1').item.json['🤰 Está gestante? Se sim, quantos meses?'] }}\n\n🥼 Cirurgia recente: {{ $('Formulário Anamnese1').item.json['🥼 Alguma cirurgia recente? Onde e há quanto tempo?'] }}\n\n━━━━━━━━━━━━━━━━━━━━\n💪 CONDIÇÕES FÍSICAS\n━━━━━━━━━━━━━━━━━━━━\n\n😣 Dores/Tensões: {{ $('Formulário Anamnese1').item.json['😣 Sente dores ou tensões frequentemente?'] }}\n\n😴 Qualidade do sono: {{ $('Formulário Anamnese1').item.json['😴 Dorme bem?'] }}\n\n🏃‍♀️ Atividade física: {{ $('Formulário Anamnese1').item.json['🏃‍♀️ Pratica atividade física? Qual e com que frequência?'] }}\n\n😰 Nível de stress: {{ $('Formulário Anamnese1').item.json['😰 Nível de stress'] }}\n\n━━━━━━━━━━━━━━━━━━━━\n✨ EXPECTATIVAS\n━━━━━━━━━━━━━━━━━━━━\n\n{{ $('Formulário Anamnese1').item.json['✨ O que você espera da massagem agendada?'] }}\n\n📝 Observações: {{ $('Formulário Anamnese1').item.json['📝 Alguma observação não mencionada?'] }}",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        -144,
+        -144
+      ],
+      "id": "0ecfdc2f-b3f6-460e-bc40-acd176c75844",
+      "name": "Notificação Telegram1",
+      "webhookId": "9a10fa9c-f6f6-49f8-bf4a-7eb2938cb06c",
+      "credentials": {
+        "telegramApi": {
+          "id": "axPTeDEh6Jh2dwxI",
+          "name": "Ananda_BOT"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "formTitle": "🌿 Anamnese – Massagem Relaxante 🌿\nANANDA THERAPY",
+        "formDescription": "Bem-vindo(a)! Este formulário me ajudará a conhecer você melhor e proporcionar o atendimento ideal.\n\n📱 Instagram: @ananda.therapy_\n🔗 https://www.instagram.com/ananda.therapy_/\n\n✨ Todas as informações são importantes para sua sessão",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "💆‍♀️ Qual é o seu nome completo?",
+              "placeholder": "Seu nome completo",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "📧 Qual o seu e-mail?",
+              "fieldType": "email",
+              "placeholder": "seu@email.com",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "🎂 Qual a sua data de nascimento?",
+              "fieldType": "date",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "📱 Qual o seu telefone/WhatsApp?",
+              "placeholder": "(21) 99999-9999",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "💼 Qual a sua profissão?",
+              "placeholder": "Sua profissão"
+            },
+            {
+              "fieldLabel": "🥼 Possui alguma doença crônica?",
+              "fieldType": "dropdown",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "Sim"
+                  },
+                  {
+                    "option": "Não"
+                  }
+                ]
+              }
+            },
+            {
+              "fieldLabel": "💊 Faz uso de medicamento atualmente?",
+              "fieldType": "dropdown",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "Sim"
+                  },
+                  {
+                    "option": "Não"
+                  }
+                ]
+              }
+            },
+            {
+              "fieldLabel": "❤️ Possui problemas cardíacos?",
+              "fieldType": "dropdown",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "Pressão alta"
+                  },
+                  {
+                    "option": "Pressão baixa"
+                  },
+                  {
+                    "option": "Outros"
+                  },
+                  {
+                    "option": "Não"
+                  }
+                ]
+              },
+              "multiselect": true
+            },
+            {
+              "fieldLabel": "🩸 Possui problemas de circulação?",
+              "fieldType": "dropdown",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "Varizes"
+                  },
+                  {
+                    "option": "Trombose"
+                  },
+                  {
+                    "option": "Flebite"
+                  },
+                  {
+                    "option": "Não"
+                  }
+                ]
+              },
+              "multiselect": true
+            },
+            {
+              "fieldLabel": "🎗️ Tem ou teve câncer?",
+              "fieldType": "dropdown",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "Sim"
+                  },
+                  {
+                    "option": "Não"
+                  }
+                ]
+              }
+            },
+            {
+              "fieldLabel": "🌸 Tem alguma alergia na pele?",
+              "fieldType": "dropdown",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "Sim"
+                  },
+                  {
+                    "option": "Não"
+                  }
+                ]
+              }
+            },
+            {
+              "fieldLabel": "🤰 Está gestante? Se sim, quantos meses?",
+              "fieldType": "textarea",
+              "placeholder": "Ex: Sim, 5 meses / Não"
+            },
+            {
+              "fieldLabel": "🥼 Alguma cirurgia recente? Onde e há quanto tempo?",
+              "fieldType": "textarea",
+              "placeholder": "Ex: Sim, cirurgia no joelho há 3 meses"
+            },
+            {
+              "fieldLabel": "😣 Sente dores ou tensões frequentemente?",
+              "fieldType": "dropdown",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "Cervical"
+                  },
+                  {
+                    "option": "Ombro"
+                  },
+                  {
+                    "option": "Lombar"
+                  },
+                  {
+                    "option": "Pernas"
+                  },
+                  {
+                    "option": "Outros"
+                  },
+                  {
+                    "option": "Não"
+                  }
+                ]
+              },
+              "multiselect": true
+            },
+            {
+              "fieldLabel": "😴 Dorme bem?",
+              "fieldType": "dropdown",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "Sim"
+                  },
+                  {
+                    "option": "Não"
+                  }
+                ]
+              }
+            },
+            {
+              "fieldLabel": "🏃‍♀️ Pratica atividade física? Qual e com que frequência?",
+              "fieldType": "textarea",
+              "placeholder": "Ex: Sim, yoga 3x por semana"
+            },
+            {
+              "fieldLabel": "😰 Nível de stress",
+              "fieldType": "dropdown",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "Leve"
+                  },
+                  {
+                    "option": "Moderado"
+                  },
+                  {
+                    "option": "Alto"
+                  }
+                ]
+              }
+            },
+            {
+              "fieldLabel": "✨ O que você espera da massagem agendada?",
+              "fieldType": "textarea",
+              "placeholder": "Relaxamento, alívio de dores, bem-estar..."
+            },
+            {
+              "fieldLabel": "📝 Alguma observação não mencionada?",
+              "fieldType": "textarea",
+              "placeholder": "Informações adicionais importantes..."
+            }
+          ]
+        },
+        "options": {
+          "customCss": ":root{--verde-principal:#8BA888;--verde-secundario:#A8C5A4;--verde-escuro:#6B8E6B;--verde-claro:#C8D9C4;--neutro-claro:#F5F7F5;--neutro-medio:#E8EDE8;--texto-escuro:#3d4a3d}body{background:linear-gradient(135deg,#E8EDE8 0%,#C8D9C4 100%)!important;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif!important;padding:20px!important}.form-container{max-width:700px!important;margin:0 auto!important;background:white!important;border-radius:20px!important;box-shadow:0 20px 60px rgba(107,142,107,0.2)!important;overflow:hidden!important}.form-header{background:linear-gradient(135deg,#8BA888 0%,#A8C5A4 100%)!important;color:white!important;padding:40px 30px!important;text-align:center!important;border-radius:20px 20px 0 0!important;position:relative!important}.form-title,h1,.n8n-form-title{color:white!important;font-size:28px!important;font-weight:600!important;text-shadow:2px 2px 4px rgba(61,74,61,0.3)!important;margin-bottom:10px!important;position:relative!important;z-index:1!important}.form-description{color:rgba(255,255,255,0.98)!important;font-size:15px!important;line-height:1.8!important;margin-top:15px!important;position:relative!important;z-index:1!important}.form-body{padding:40px 30px!important;background:#F5F7F5!important}label{color:var(--texto-escuro)!important;font-weight:500!important;font-size:15px!important;margin-bottom:8px!important;display:block!important}input,textarea,select{width:100%!important;padding:12px 15px!important;border:2px solid var(--verde-claro)!important;border-radius:8px!important;font-size:15px!important;transition:all 0.3s ease!important;margin-bottom:20px!important;font-family:inherit!important;background:white!important}input:focus,select:focus,textarea:focus{outline:none!important;border-color:var(--verde-principal)!important;box-shadow:0 0 0 4px rgba(139,168,136,0.15)!important}textarea{resize:vertical!important;min-height:80px!important}select{cursor:pointer!important;appearance:none!important;background-image:url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%238BA888' d='M10.293 3.293L6 7.586 1.707 3.293A1 1 0 00.293 4.707l5 5a1 1 0 001.414 0l5-5a1 1 0 10-1.414-1.414z'/%3E%3C/svg%3E\")!important;background-repeat:no-repeat!important;background-position:right 15px center!important;padding-right:40px!important}button[type=submit]{width:100%!important;background:linear-gradient(135deg,#8BA888 0%,#6B8E6B 100%)!important;color:white!important;padding:16px!important;border:none!important;border-radius:10px!important;font-size:18px!important;font-weight:600!important;cursor:pointer!important;transition:all 0.3s ease!important;box-shadow:0 4px 15px rgba(107,142,107,0.3)!important;margin-top:20px!important}button[type=submit]:hover{transform:translateY(-2px)!important;box-shadow:0 6px 25px rgba(107,142,107,0.4)!important;background:linear-gradient(135deg,#6B8E6B 0%,#5a7a5a 100%)!important}.success-message{text-align:center!important;padding:40px!important;color:var(--texto-escuro)!important;background:#F5F7F5!important}.required{color:#c75b39!important}"
+        }
+      },
+      "type": "n8n-nodes-base.formTrigger",
+      "typeVersion": 2.2,
+      "position": [
+        -1040,
+        -144
+      ],
+      "id": "c4dcdd11-3a5b-4741-8d2f-13e8274feb6a",
+      "name": "Formulário Anamnese1",
+      "webhookId": "d1c711c1-e978-49e4-be3e-654870ffb163"
+    },
+    {
+      "parameters": {
+        "formTitle": "🌿 Anamnese – Massagem Relaxante 🌿\nANANDA THERAPY",
+        "formDescription": "Bem-vindo(a)! Este formulário me ajudará a conhecer você melhor e proporcionar o atendimento ideal.\n\n📱 Instagram: @ananda.therapy_\n🔗 https://www.instagram.com/ananda.therapy_/\n\n✨ Todas as informações são importantes para sua sessão",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "💆‍♀️ Qual é o seu nome completo?",
+              "placeholder": "Seu nome completo",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "📧 Qual o seu e-mail?",
+              "fieldType": "email",
+              "placeholder": "seu@email.com",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "🎂 Qual a sua data de nascimento?",
+              "fieldType": "date",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "📱 Qual o seu telefone/WhatsApp?",
+              "placeholder": "(21) 99999-9999",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "💼 Qual a sua profissão?",
+              "placeholder": "Sua profissão"
+            },
+            {
+              "fieldLabel": "🥼 Possui alguma doença crônica?",
+              "fieldType": "dropdown",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "Sim"
+                  },
+                  {
+                    "option": "Não"
+                  }
+                ]
+              }
+            },
+            {
+              "fieldLabel": "💊 Faz uso de medicamento atualmente?",
+              "fieldType": "dropdown",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "Sim"
+                  },
+                  {
+                    "option": "Não"
+                  }
+                ]
+              }
+            },
+            {
+              "fieldLabel": "❤️ Possui problemas cardíacos?",
+              "fieldType": "dropdown",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "Pressão alta"
+                  },
+                  {
+                    "option": "Pressão baixa"
+                  },
+                  {
+                    "option": "Outros"
+                  },
+                  {
+                    "option": "Não"
+                  }
+                ]
+              },
+              "multiselect": true
+            },
+            {
+              "fieldLabel": "🩸 Possui problemas de circulação?",
+              "fieldType": "dropdown",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "Varizes"
+                  },
+                  {
+                    "option": "Trombose"
+                  },
+                  {
+                    "option": "Flebite"
+                  },
+                  {
+                    "option": "Não"
+                  }
+                ]
+              },
+              "multiselect": true
+            },
+            {
+              "fieldLabel": "🎗️ Tem ou teve câncer?",
+              "fieldType": "dropdown",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "Sim"
+                  },
+                  {
+                    "option": "Não"
+                  }
+                ]
+              }
+            },
+            {
+              "fieldLabel": "🌸 Tem alguma alergia na pele?",
+              "fieldType": "dropdown",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "Sim"
+                  },
+                  {
+                    "option": "Não"
+                  }
+                ]
+              }
+            },
+            {
+              "fieldLabel": "🤰 Está gestante? Se sim, quantos meses?",
+              "fieldType": "textarea",
+              "placeholder": "Ex: Sim, 5 meses / Não"
+            },
+            {
+              "fieldLabel": "🥼 Alguma cirurgia recente? Onde e há quanto tempo?",
+              "fieldType": "textarea",
+              "placeholder": "Ex: Sim, cirurgia no joelho há 3 meses"
+            },
+            {
+              "fieldLabel": "😣 Sente dores ou tensões frequentemente?",
+              "fieldType": "dropdown",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "Cervical"
+                  },
+                  {
+                    "option": "Ombro"
+                  },
+                  {
+                    "option": "Lombar"
+                  },
+                  {
+                    "option": "Pernas"
+                  },
+                  {
+                    "option": "Outros"
+                  },
+                  {
+                    "option": "Não"
+                  }
+                ]
+              },
+              "multiselect": true
+            },
+            {
+              "fieldLabel": "😴 Dorme bem?",
+              "fieldType": "dropdown",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "Sim"
+                  },
+                  {
+                    "option": "Não"
+                  }
+                ]
+              }
+            },
+            {
+              "fieldLabel": "🏃‍♀️ Pratica atividade física? Qual e com que frequência?",
+              "fieldType": "textarea",
+              "placeholder": "Ex: Sim, yoga 3x por semana"
+            },
+            {
+              "fieldLabel": "😰 Nível de stress",
+              "fieldType": "dropdown",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "Leve"
+                  },
+                  {
+                    "option": "Moderado"
+                  },
+                  {
+                    "option": "Alto"
+                  }
+                ]
+              }
+            },
+            {
+              "fieldLabel": "✨ O que você espera da massagem agendada?",
+              "fieldType": "textarea",
+              "placeholder": "Relaxamento, alívio de dores, bem-estar..."
+            },
+            {
+              "fieldLabel": "📝 Alguma observação não mencionada?",
+              "fieldType": "textarea",
+              "placeholder": "Informações adicionais importantes..."
+            }
+          ]
+        },
+        "options": {
+          "customCss": ":root{--verde-principal:#8BA888;--verde-secundario:#A8C5A4;--verde-escuro:#6B8E6B;--verde-claro:#C8D9C4;--neutro-claro:#F5F7F5;--neutro-medio:#E8EDE8;--texto-escuro:#3d4a3d}body{background:linear-gradient(135deg,#E8EDE8 0%,#C8D9C4 100%)!important;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif!important;padding:20px!important}.form-container{max-width:700px!important;margin:0 auto!important;background:white!important;border-radius:20px!important;box-shadow:0 20px 60px rgba(107,142,107,0.2)!important;overflow:hidden!important}.form-header{background:linear-gradient(135deg,#8BA888 0%,#A8C5A4 100%)!important;color:white!important;padding:40px 30px!important;text-align:center!important;border-radius:20px 20px 0 0!important;position:relative!important}.form-title,h1,.n8n-form-title{color:white!important;font-size:28px!important;font-weight:600!important;text-shadow:2px 2px 4px rgba(61,74,61,0.3)!important;margin-bottom:10px!important;position:relative!important;z-index:1!important}.form-description{color:rgba(255,255,255,0.98)!important;font-size:15px!important;line-height:1.8!important;margin-top:15px!important;position:relative!important;z-index:1!important}.form-body{padding:40px 30px!important;background:#F5F7F5!important}label{color:var(--texto-escuro)!important;font-weight:500!important;font-size:15px!important;margin-bottom:8px!important;display:block!important}input,textarea,select{width:100%!important;padding:12px 15px!important;border:2px solid var(--verde-claro)!important;border-radius:8px!important;font-size:15px!important;transition:all 0.3s ease!important;margin-bottom:20px!important;font-family:inherit!important;background:white!important}input:focus,select:focus,textarea:focus{outline:none!important;border-color:var(--verde-principal)!important;box-shadow:0 0 0 4px rgba(139,168,136,0.15)!important}textarea{resize:vertical!important;min-height:80px!important}select{cursor:pointer!important;appearance:none!important;background-image:url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%238BA888' d='M10.293 3.293L6 7.586 1.707 3.293A1 1 0 00.293 4.707l5 5a1 1 0 001.414 0l5-5a1 1 0 10-1.414-1.414z'/%3E%3C/svg%3E\")!important;background-repeat:no-repeat!important;background-position:right 15px center!important;padding-right:40px!important}button[type=submit]{width:100%!important;background:linear-gradient(135deg,#8BA888 0%,#6B8E6B 100%)!important;color:white!important;padding:16px!important;border:none!important;border-radius:10px!important;font-size:18px!important;font-weight:600!important;cursor:pointer!important;transition:all 0.3s ease!important;box-shadow:0 4px 15px rgba(107,142,107,0.3)!important;margin-top:20px!important}button[type=submit]:hover{transform:translateY(-2px)!important;box-shadow:0 6px 25px rgba(107,142,107,0.4)!important;background:linear-gradient(135deg,#6B8E6B 0%,#5a7a5a 100%)!important}.success-message{text-align:center!important;padding:40px!important;color:var(--texto-escuro)!important;background:#F5F7F5!important}.required{color:#c75b39!important}"
+        }
+      },
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 2.3,
+      "position": [
+        -1040,
+        -368
+      ],
+      "id": "19638d16-30e5-4a01-83af-b0b3489fc13a",
+      "name": "Form",
+      "webhookId": "f0e8813d-fc08-4b57-a581-e5c9c6ec6518"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Salvar no Google Sheets1": {
+      "main": [
+        [
+          {
+            "node": "Baixar Manual PDF1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Baixar Manual PDF1": {
+      "main": [
+        [
+          {
+            "node": "Enviar E-mail Cliente1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Enviar E-mail Cliente1": {
+      "main": [
+        [
+          {
+            "node": "Notificação Telegram1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Formulário Anamnese1": {
+      "main": [
+        [
+          {
+            "node": "Salvar no Google Sheets1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "adaed47f-04b4-4e48-8602-28d5b1f3c62a",
+  "meta": {
+    "instanceId": "878a2b0ae6d33bfe7f5d33b3048176e72c34a6e7fe9aec20661db581c0c71a56"
+  },
+  "id": "opU1XX54WNSYrFM9",
+  "tags": []
+}
