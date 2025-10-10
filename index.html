@@ -3,508 +3,642 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🔬 DIAGNÓSTICO - Ananda Therapy</title>
+    <meta name="description" content="Anamnese - Ananda Therapy - Massagem Relaxante">
+    <meta name="theme-color" content="#8BA888">
+    <meta name="author" content="Ananda Therapy">
+    <title>Anamnese - Ananda Therapy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --verde-principal: #8BA888;
+            --verde-secundario: #A8C5A4;
+            --verde-escuro: #6B8E6B;
+            --verde-claro: #C8D9C4;
+            --neutro-claro: #F5F7F5;
+            --neutro-medio: #E8EDE8;
+            --texto-escuro: #3d4a3d;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
-            font-family: 'Courier New', monospace;
-            background: #1e1e1e;
-            color: #d4d4d4;
+            font-family: 'Poppins', 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, var(--neutro-medio) 0%, var(--verde-claro) 100%);
+            min-height: 100vh;
             padding: 20px;
         }
+
         .container {
-            max-width: 900px;
+            max-width: 700px;
             margin: 0 auto;
-            background: #252526;
-            border-radius: 10px;
-            padding: 30px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(107,142,107,0.2);
+            overflow: hidden;
+            animation: fadeIn 0.5s ease-in;
         }
-        h1 {
-            color: #4ec9b0;
-            margin-bottom: 20px;
-            text-align: center;
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
-        .section {
-            background: #1e1e1e;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 8px;
-            border-left: 4px solid #4ec9b0;
-        }
-        .section h2 {
-            color: #569cd6;
-            margin-bottom: 15px;
-            font-size: 18px;
-        }
-        .log {
-            background: #0e0e0e;
-            padding: 15px;
-            border-radius: 5px;
-            max-height: 400px;
-            overflow-y: auto;
-            font-size: 13px;
-            line-height: 1.6;
-            white-space: pre-wrap;
-            word-wrap: break-word;
-        }
-        .log-entry {
-            margin: 5px 0;
-        }
-        .log-success { color: #4ec9b0; }
-        .log-error { color: #f48771; }
-        .log-warning { color: #dcdcaa; }
-        .log-info { color: #9cdcfe; }
-        .log-time { color: #808080; }
-        input, button {
-            width: 100%;
-            padding: 12px;
-            margin: 10px 0;
-            border: 2px solid #3e3e42;
-            border-radius: 5px;
-            background: #1e1e1e;
-            color: #d4d4d4;
-            font-size: 14px;
-        }
-        button {
-            background: #0e639c;
-            border-color: #0e639c;
+
+        .header {
+            background: linear-gradient(135deg, var(--verde-principal) 0%, var(--verde-secundario) 100%);
             color: white;
+            padding: 40px 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .header h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            font-weight: 600;
+            text-shadow: 2px 2px 4px rgba(61,74,61,0.3);
+            position: relative;
+            z-index: 1;
+        }
+
+        .header .subtitle {
+            font-size: 18px;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            font-weight: 300;
+            position: relative;
+            z-index: 1;
+        }
+
+        .instagram-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255,255,255,0.25);
+            padding: 12px 24px;
+            border-radius: 30px;
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            margin-top: 15px;
+            backdrop-filter: blur(10px);
+            position: relative;
+            z-index: 1;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        .instagram-badge:hover {
+            background: rgba(255,255,255,0.35);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(107,142,107,0.3);
+        }
+
+        .instagram-icon {
+            font-size: 20px;
+        }
+
+        .form-content {
+            padding: 40px 30px;
+            background: var(--neutro-claro);
+        }
+
+        .intro-text {
+            text-align: center;
+            color: var(--texto-escuro);
+            margin-bottom: 35px;
+            line-height: 1.8;
+            font-size: 15px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+            animation: slideIn 0.3s ease-out;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-10px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        label {
+            display: block;
+            color: var(--texto-escuro);
+            font-weight: 500;
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+
+        .required {
+            color: #c75b39;
+            margin-left: 3px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid var(--verde-claro);
+            border-radius: 8px;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            font-family: inherit;
+            background: white;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: var(--verde-principal);
+            box-shadow: 0 0 0 4px rgba(139,168,136,0.15);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        select {
             cursor: pointer;
-            font-weight: bold;
-            transition: all 0.3s;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%238BA888' d='M10.293 3.293L6 7.586 1.707 3.293A1 1 0 00.293 4.707l5 5a1 1 0 001.414 0l5-5a1 1 0 10-1.414-1.414z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 15px center;
+            padding-right: 40px;
         }
-        button:hover {
-            background: #1177bb;
+
+        .submit-btn {
+            width: 100%;
+            background: linear-gradient(135deg, var(--verde-principal) 0%, var(--verde-escuro) 100%);
+            color: white;
+            padding: 16px;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(107,142,107,0.3);
+            margin-top: 20px;
         }
-        button:disabled {
-            opacity: 0.5;
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(107,142,107,0.4);
+            background: linear-gradient(135deg, var(--verde-escuro) 0%, #5a7a5a 100%);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.6;
             cursor: not-allowed;
         }
-        .status-box {
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 5px;
-            font-weight: bold;
-            text-align: center;
+
+        .loading {
             display: none;
+            text-align: center;
+            padding: 40px;
+            color: var(--verde-escuro);
+            background: var(--neutro-claro);
         }
-        .status-success {
-            background: #1e3a28;
-            color: #4ec9b0;
-            border: 2px solid #4ec9b0;
+
+        .loading.show {
+            display: block;
         }
-        .status-error {
-            background: #3a1e1e;
-            color: #f48771;
-            border: 2px solid #f48771;
+
+        .spinner {
+            border: 3px solid var(--verde-claro);
+            border-top: 3px solid var(--verde-principal);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
         }
-        .url-display {
-            background: #0e0e0e;
-            padding: 12px;
-            border-radius: 5px;
-            color: #dcdcaa;
-            word-break: break-all;
-            margin: 10px 0;
-            border: 1px solid #3e3e42;
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
-        .quick-test {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            margin-top: 15px;
+
+        .success-message {
+            display: none;
+            text-align: center;
+            padding: 60px 40px;
+            color: var(--texto-escuro);
+            background: var(--neutro-claro);
         }
+
+        .success-message.show {
+            display: block;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        .success-icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+            animation: bounce 0.6s ease-in-out;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .success-message h2 {
+            color: var(--verde-principal);
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        .success-message p {
+            line-height: 2;
+            font-size: 16px;
+        }
+
+        .success-message a {
+            color: var(--verde-escuro);
+            font-weight: bold;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .success-message a:hover {
+            color: var(--verde-principal);
+        }
+
+        .error-message {
+            display: none;
+            background: #fee;
+            border: 1px solid #fcc;
+            color: #c00;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .error-message.show {
+            display: block;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 25px;
+            background: var(--neutro-medio);
+            color: var(--verde-escuro);
+            font-size: 14px;
+            border-top: 1px solid var(--verde-claro);
+        }
+
+        .footer strong {
+            color: var(--verde-principal);
+        }
+
+        .leaf {
+            position: fixed;
+            font-size: 30px;
+            opacity: 0.3;
+            pointer-events: none;
+            animation: float 10s infinite ease-in-out;
+        }
+
+        .leaf:nth-child(1) { left: 10%; animation-delay: 0s; }
+        .leaf:nth-child(2) { left: 30%; animation-delay: 2s; }
+        .leaf:nth-child(3) { left: 50%; animation-delay: 4s; }
+        .leaf:nth-child(4) { left: 70%; animation-delay: 6s; }
+        .leaf:nth-child(5) { left: 90%; animation-delay: 8s; }
+
+        @keyframes float {
+            0% { transform: translateY(-100vh) rotate(0deg); }
+            50% { transform: translateY(50vh) rotate(180deg); }
+            100% { transform: translateY(100vh) rotate(360deg); }
+        }
+
         @media (max-width: 768px) {
-            .quick-test {
-                grid-template-columns: 1fr;
+            .container {
+                margin: 10px;
+                border-radius: 15px;
+            }
+
+            .header {
+                padding: 30px 20px;
+            }
+
+            .header h1 {
+                font-size: 24px;
+            }
+
+            .form-content {
+                padding: 30px 20px;
+            }
+
+            .success-message {
+                padding: 40px 20px;
+            }
+
+            .leaf {
+                display: none;
             }
         }
     </style>
 </head>
 <body>
+    <div class="leaf">🌿</div>
+    <div class="leaf">🍃</div>
+    <div class="leaf">🌿</div>
+    <div class="leaf">🍃</div>
+    <div class="leaf">🌿</div>
+
     <div class="container">
-        <h1>🔬 DIAGNÓSTICO COMPLETO DO WEBHOOK</h1>
-        
-        <div class="section">
-            <h2>⚙️ CONFIGURAÇÃO</h2>
-            <label for="webhookUrl">URL do Webhook:</label>
-            <input 
-                type="text" 
-                id="webhookUrl" 
-                value="https://n8n.mbam.com.br/webhook-test/c21f2fce-ac80-421c-bf67-f0da5c3b84b0"
-                placeholder="Cole a URL completa do webhook aqui"
-            >
-            <div class="quick-test">
-                <button onclick="testWithWebhook()">🔍 Testar /webhook/</button>
-                <button onclick="testWithWebhookTest()">🔍 Testar /webhook-test/</button>
+        <div class="header">
+            <h1>🌿 Anamnese — Massagem Relaxante 🌿</h1>
+            <div class="subtitle">ANANDA THERAPY</div>
+            <a href="https://www.instagram.com/ananda.therapy_/" target="_blank" class="instagram-badge">
+                <span class="instagram-icon">📱</span>
+                @ananda.therapy_
+            </a>
+        </div>
+
+        <div class="form-content">
+            <div class="intro-text">
+                Bem-vindo(a)! Este formulário me ajudará a conhecer você melhor<br>
+                e proporcionar o atendimento ideal.<br>
+                <strong>✨ Todas as informações são importantes para sua sessão</strong>
+            </div>
+
+            <div class="error-message" id="errorMessage"></div>
+
+            <form id="anamneseForm">
+                <div class="form-group">
+                    <label>💆‍♀️ Qual é o seu nome completo? <span class="required">*</span></label>
+                    <input type="text" name="nome" placeholder="Seu nome completo" required>
+                </div>
+
+                <div class="form-group">
+                    <label>📧 Qual o seu e-mail? <span class="required">*</span></label>
+                    <input type="email" name="email" placeholder="seu@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label>🎂 Qual a sua data de nascimento? <span class="required">*</span></label>
+                    <input type="date" name="dataNascimento" required>
+                </div>
+
+                <div class="form-group">
+                    <label>📱 Qual o seu telefone/WhatsApp? <span class="required">*</span></label>
+                    <input type="tel" name="telefone" placeholder="(21) 99999-9999" required>
+                </div>
+
+                <div class="form-group">
+                    <label>💼 Qual a sua profissão?</label>
+                    <input type="text" name="profissao" placeholder="Sua profissão">
+                </div>
+
+                <div class="form-group">
+                    <label>🏥 Possui alguma doença crônica?</label>
+                    <select name="doencaCronica">
+                        <option value="">Selecione...</option>
+                        <option value="Sim">Sim</option>
+                        <option value="Não">Não</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>💊 Faz uso de medicamento atualmente?</label>
+                    <select name="medicamento">
+                        <option value="">Selecione...</option>
+                        <option value="Sim">Sim</option>
+                        <option value="Não">Não</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>❤️ Possui problemas cardíacos?</label>
+                    <select name="problemasCardiacos">
+                        <option value="">Selecione...</option>
+                        <option value="Pressão alta">Pressão alta</option>
+                        <option value="Pressão baixa">Pressão baixa</option>
+                        <option value="Outros">Outros</option>
+                        <option value="Não">Não</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>🩸 Possui problemas de circulação?</label>
+                    <select name="problemasCirculacao">
+                        <option value="">Selecione...</option>
+                        <option value="Varizes">Varizes</option>
+                        <option value="Trombose">Trombose</option>
+                        <option value="Flebite">Flebite</option>
+                        <option value="Não">Não</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>🎗️ Tem ou teve câncer?</label>
+                    <select name="cancer">
+                        <option value="">Selecione...</option>
+                        <option value="Sim">Sim</option>
+                        <option value="Não">Não</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>🌸 Tem alguma alergia na pele?</label>
+                    <select name="alergiaPele">
+                        <option value="">Selecione...</option>
+                        <option value="Sim">Sim</option>
+                        <option value="Não">Não</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>🤰 Está gestante? Se sim, quantos meses?</label>
+                    <textarea name="gestante" placeholder="Ex: Sim, 5 meses / Não"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>🏥 Alguma cirurgia recente? Onde e há quanto tempo?</label>
+                    <textarea name="cirurgia" placeholder="Ex: Sim, cirurgia no joelho há 3 meses"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>😣 Sente dores ou tensões frequentemente?</label>
+                    <select name="dores">
+                        <option value="">Selecione...</option>
+                        <option value="Cervical">Cervical</option>
+                        <option value="Ombro">Ombro</option>
+                        <option value="Lombar">Lombar</option>
+                        <option value="Pernas">Pernas</option>
+                        <option value="Outros">Outros</option>
+                        <option value="Não">Não</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>😴 Dorme bem?</label>
+                    <select name="sono">
+                        <option value="">Selecione...</option>
+                        <option value="Sim">Sim</option>
+                        <option value="Não">Não</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>🏃‍♀️ Pratica atividade física? Qual e com que frequência?</label>
+                    <textarea name="atividadeFisica" placeholder="Ex: Sim, yoga 3x por semana"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>😰 Nível de stress</label>
+                    <select name="stress">
+                        <option value="">Selecione...</option>
+                        <option value="Leve">Leve</option>
+                        <option value="Moderado">Moderado</option>
+                        <option value="Alto">Alto</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>✨ O que você espera da massagem agendada?</label>
+                    <textarea name="expectativas" placeholder="Relaxamento, alívio de dores, bem-estar..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>📝 Alguma observação não mencionada?</label>
+                    <textarea name="observacoes" placeholder="Informações adicionais importantes..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn" id="submitBtn">
+                    Enviar Formulário ✨
+                </button>
+            </form>
+
+            <div class="loading" id="loadingMessage">
+                <div class="spinner"></div>
+                <p>Enviando seu formulário...</p>
+            </div>
+
+            <div class="success-message" id="successMessage">
+                <div class="success-icon">✅</div>
+                <h2>Formulário enviado com sucesso!</h2>
+                <p>
+                    🙏 Muito obrigada por preencher a anamnese!<br>
+                    📧 Você receberá um e-mail com orientações em breve.<br>
+                    💚 Nos vemos logo!<br><br>
+                    <a href="https://www.instagram.com/ananda.therapy_/" target="_blank">
+                        📱 Siga @ananda.therapy_ no Instagram
+                    </a>
+                </p>
             </div>
         </div>
 
-        <div class="section">
-            <h2>🧪 DADOS DE TESTE</h2>
-            <input type="text" id="testNome" placeholder="Nome Completo" value="Teste Debug">
-            <input type="email" id="testEmail" placeholder="E-mail" value="teste@debug.com">
-            <input type="tel" id="testTelefone" placeholder="Telefone" value="21999999999">
-            <button onclick="runFullTest()" id="testBtn">▶️ EXECUTAR TESTE COMPLETO</button>
-        </div>
-
-        <div id="statusBox" class="status-box"></div>
-
-        <div class="section">
-            <h2>📊 LOG DE EXECUÇÃO</h2>
-            <div id="logConsole" class="log">
-                <div class="log-info">🔧 Sistema pronto. Aguardando teste...</div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>🎯 RESULTADOS DO DIAGNÓSTICO</h2>
-            <div id="resultados" class="log">
-                <div class="log-warning">⏳ Nenhum teste executado ainda</div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>💡 SOLUÇÕES SUGERIDAS</h2>
-            <div id="solucoes" class="log">
-                <div class="log-info">Aguardando resultado do teste para sugerir soluções...</div>
-            </div>
+        <div class="footer">
+            💚 <strong>Ananda Therapy</strong> - Massagem e Bem-estar<br>
+            📱 WhatsApp: (24) 99882-6028 | 📷 Instagram: @ananda.therapy_
         </div>
     </div>
 
     <script>
-        const logConsole = document.getElementById('logConsole');
-        const resultados = document.getElementById('resultados');
-        const solucoes = document.getElementById('solucoes');
-        const statusBox = document.getElementById('statusBox');
-        const testBtn = document.getElementById('testBtn');
-
-        function log(message, type = 'info') {
-            const time = new Date().toLocaleTimeString();
-            const colors = {
-                success: 'log-success',
-                error: 'log-error',
-                warning: 'log-warning',
-                info: 'log-info'
-            };
+        // ✅ URL DO WEBHOOK N8N - FUNCIONANDO!
+        const N8N_WEBHOOK_URL = 'https://n8n.mbam.com.br/webhook/c21f2fce-ac80-421c-bf67-f0da5c3b84b0';
+        
+        document.getElementById('anamneseForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
             
-            const entry = document.createElement('div');
-            entry.className = 'log-entry';
-            entry.innerHTML = `<span class="log-time">[${time}]</span> <span class="${colors[type]}">${message}</span>`;
-            logConsole.appendChild(entry);
-            logConsole.scrollTop = logConsole.scrollHeight;
-        }
-
-        function clearLogs() {
-            logConsole.innerHTML = '';
-            resultados.innerHTML = '';
-            solucoes.innerHTML = '';
-            statusBox.style.display = 'none';
-        }
-
-        function showStatus(message, isSuccess) {
-            statusBox.textContent = message;
-            statusBox.className = 'status-box ' + (isSuccess ? 'status-success' : 'status-error');
-            statusBox.style.display = 'block';
-        }
-
-        function testWithWebhook() {
-            const currentUrl = document.getElementById('webhookUrl').value;
-            const newUrl = currentUrl.replace('/webhook-test/', '/webhook/');
-            document.getElementById('webhookUrl').value = newUrl;
-            log('✏️ URL alterada para /webhook/', 'warning');
-            log('🔄 Clique em "EXECUTAR TESTE COMPLETO" para testar', 'info');
-        }
-
-        function testWithWebhookTest() {
-            const currentUrl = document.getElementById('webhookUrl').value;
-            const newUrl = currentUrl.replace('/webhook/', '/webhook-test/');
-            document.getElementById('webhookUrl').value = newUrl;
-            log('✏️ URL alterada para /webhook-test/', 'warning');
-            log('🔄 Clique em "EXECUTAR TESTE COMPLETO" para testar', 'info');
-        }
-
-        async function runFullTest() {
-            clearLogs();
-            testBtn.disabled = true;
+            const formData = new FormData(this);
+            const data = {};
             
-            log('═══════════════════════════════════════', 'info');
-            log('🚀 INICIANDO DIAGNÓSTICO COMPLETO', 'info');
-            log('═══════════════════════════════════════', 'info');
+            formData.forEach((value, key) => {
+                data[key] = value;
+            });
             
-            const webhookUrl = document.getElementById('webhookUrl').value;
-            const nome = document.getElementById('testNome').value;
-            const email = document.getElementById('testEmail').value;
-            const telefone = document.getElementById('testTelefone').value;
-
-            // Validações iniciais
-            log('', 'info');
-            log('📋 ETAPA 1: Validações Iniciais', 'warning');
-            log('─────────────────────────────────────', 'info');
-            
-            if (!webhookUrl) {
-                log('❌ ERRO: URL do webhook está vazia', 'error');
-                showStatus('❌ Configure a URL do webhook', false);
-                testBtn.disabled = false;
-                return;
-            }
-            log('✅ URL do webhook configurada', 'success');
-            log(`   ${webhookUrl}`, 'info');
-
-            if (!webhookUrl.startsWith('https://')) {
-                log('⚠️ AVISO: URL não usa HTTPS', 'warning');
-            } else {
-                log('✅ URL usa HTTPS', 'success');
-            }
-
-            // Preparar dados
-            log('', 'info');
-            log('📦 ETAPA 2: Preparando Dados', 'warning');
-            log('─────────────────────────────────────', 'info');
-            
+            // Mapear campos para os nomes com emojis que o n8n espera
             const mappedData = {
-                '💆‍♀️ Qual é o seu nome completo?': nome,
-                '📧 Qual o seu e-mail?': email,
-                '📱 Qual o seu telefone/WhatsApp?': telefone
+                '💆‍♀️ Qual é o seu nome completo?': data.nome,
+                '📧 Qual o seu e-mail?': data.email,
+                '🎂 Qual a sua data de nascimento?': data.dataNascimento,
+                '📱 Qual o seu telefone/WhatsApp?': data.telefone,
+                '💼 Qual a sua profissão?': data.profissao,
+                '🏥 Possui alguma doença crônica?': data.doencaCronica,
+                '💊 Faz uso de medicamento atualmente?': data.medicamento,
+                '❤️ Possui problemas cardíacos?': data.problemasCardiacos,
+                '🩸 Possui problemas de circulação?': data.problemasCirculacao,
+                '🎗️ Tem ou teve câncer?': data.cancer,
+                '🌸 Tem alguma alergia na pele?': data.alergiaPele,
+                '🤰 Está gestante? Se sim, quantos meses?': data.gestante,
+                '🏥 Alguma cirurgia recente? Onde e há quanto tempo?': data.cirurgia,
+                '😣 Sente dores ou tensões frequentemente?': data.dores,
+                '😴 Dorme bem?': data.sono,
+                '🏃‍♀️ Pratica atividade física? Qual e com que frequência?': data.atividadeFisica,
+                '😰 Nível de stress': data.stress,
+                '✨ O que você espera da massagem agendada?': data.expectativas,
+                '📝 Alguma observação não mencionada?': data.observacoes
             };
-
-            log('✅ Dados preparados:', 'success');
-            log(JSON.stringify(mappedData, null, 2), 'info');
-
-            // Teste de conectividade
-            log('', 'info');
-            log('🌐 ETAPA 3: Teste de Conectividade', 'warning');
-            log('─────────────────────────────────────', 'info');
-            log('⏳ Enviando requisição POST...', 'info');
-
-            const startTime = Date.now();
-
+            
+            // Mostrar loading
+            document.getElementById('anamneseForm').style.display = 'none';
+            document.querySelector('.intro-text').style.display = 'none';
+            document.getElementById('loadingMessage').classList.add('show');
+            document.getElementById('errorMessage').classList.remove('show');
+            
             try {
-                const response = await fetch(webhookUrl, {
+                const response = await fetch(N8N_WEBHOOK_URL, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
                     },
                     body: JSON.stringify(mappedData)
                 });
-
-                const endTime = Date.now();
-                const duration = endTime - startTime;
-
-                log('', 'info');
-                log('📥 ETAPA 4: Analisando Resposta', 'warning');
-                log('─────────────────────────────────────', 'info');
-                log(`⏱️ Tempo de resposta: ${duration}ms`, 'info');
-                log(`📊 Status HTTP: ${response.status} ${response.statusText}`, response.ok ? 'success' : 'error');
-                log(`🔗 URL final: ${response.url}`, 'info');
-
-                // Ler resposta
-                let responseText = '';
-                let responseData = null;
-                
-                try {
-                    responseText = await response.text();
-                    log('✅ Resposta recebida do servidor', 'success');
-                    
-                    try {
-                        responseData = JSON.parse(responseText);
-                        log('✅ Resposta é JSON válido:', 'success');
-                        log(JSON.stringify(responseData, null, 2), 'info');
-                    } catch {
-                        log('📄 Resposta (texto):', 'info');
-                        log(responseText.substring(0, 500), 'info');
-                    }
-                } catch (e) {
-                    log('⚠️ Não foi possível ler a resposta', 'warning');
-                }
-
-                // Headers da resposta
-                log('', 'info');
-                log('📋 Headers da Resposta:', 'info');
-                response.headers.forEach((value, key) => {
-                    log(`   ${key}: ${value}`, 'info');
-                    
-                    if (key.toLowerCase() === 'access-control-allow-origin') {
-                        log('✅ CORS configurado!', 'success');
-                    }
-                });
-
-                // Análise detalhada
-                log('', 'info');
-                log('═══════════════════════════════════════', 'info');
-                log('🎯 RESULTADOS DO DIAGNÓSTICO', 'warning');
-                log('═══════════════════════════════════════', 'info');
-
-                resultados.innerHTML = '';
                 
                 if (response.ok) {
-                    // SUCESSO
-                    const successMsg = `
-✅✅✅ TESTE BEM-SUCEDIDO! ✅✅✅
-
-Status: ${response.status} ${response.statusText}
-Tempo: ${duration}ms
-Webhook está funcionando corretamente!
-
-O problema NÃO é o webhook ou a conexão.
-O formulário deveria estar funcionando!
-                    `;
-                    log(successMsg, 'success');
-                    resultados.innerHTML = `<div class="log-success">${successMsg}</div>`;
-                    showStatus('✅ WEBHOOK FUNCIONANDO PERFEITAMENTE!', true);
-
-                    solucoes.innerHTML = `
-<div class="log-success">
-✅ O webhook está funcionando!
-
-Se o formulário ainda não funciona, verifique:
-1. Certifique-se que a URL no HTML é exatamente esta:
-   ${webhookUrl}
-
-2. Limpe o cache do navegador (Ctrl+Shift+Delete)
-
-3. Teste em modo anônimo/privado
-
-4. Verifique se há algum AdBlock bloqueando
-</div>
-                    `;
-
-                } else if (response.status === 404) {
-                    // 404 - NÃO ENCONTRADO
-                    const errorMsg = `
-❌ ERRO 404 - WEBHOOK NÃO ENCONTRADO
-
-A URL do webhook está incorreta ou o workflow não está ativo.
-
-URL testada: ${webhookUrl}
-                    `;
-                    log(errorMsg, 'error');
-                    resultados.innerHTML = `<div class="log-error">${errorMsg}</div>`;
-                    showStatus('❌ WEBHOOK NÃO ENCONTRADO (404)', false);
-
-                    solucoes.innerHTML = `
-<div class="log-error">
-🔧 SOLUÇÕES:
-
-1. No n8n, abra o workflow
-2. Clique no nó "Webhook"
-3. Copie a "Production URL" EXATA
-4. Cole aqui e teste novamente
-
-5. Verifique se o workflow está ATIVO (botão verde)
-
-6. Tente as URLs alternativas:
-   - /webhook/ em vez de /webhook-test/
-   - Ou vice-versa
-</div>
-                    `;
-
-                } else if (response.status === 500) {
-                    // 500 - ERRO NO SERVIDOR
-                    const errorMsg = `
-❌ ERRO 500 - ERRO NO SERVIDOR
-
-O webhook foi encontrado, mas houve um erro ao processar.
-
-Possíveis causas:
-- Erro no workflow do n8n
-- Credenciais não configuradas
-- Nó desconectado
-                    `;
-                    log(errorMsg, 'error');
-                    resultados.innerHTML = `<div class="log-error">${errorMsg}</div>`;
-                    showStatus('❌ ERRO NO SERVIDOR (500)', false);
-
-                    solucoes.innerHTML = `
-<div class="log-error">
-🔧 SOLUÇÕES:
-
-1. No n8n, vá em "Executions"
-2. Veja se há execuções com erro
-3. Clique na execução para ver o erro
-4. Verifique:
-   - Google Sheets conectado?
-   - Google Drive configurado?
-   - Gmail autorizado?
-5. Teste cada nó individualmente no n8n
-</div>
-                    `;
-
+                    document.getElementById('loadingMessage').classList.remove('show');
+                    document.getElementById('successMessage').classList.add('show');
                 } else {
-                    // OUTRO ERRO
-                    const errorMsg = `
-❌ ERRO ${response.status} - ${response.statusText}
-
-Erro HTTP inesperado.
-                    `;
-                    log(errorMsg, 'error');
-                    resultados.innerHTML = `<div class="log-error">${errorMsg}</div>`;
-                    showStatus(`❌ ERRO ${response.status}`, false);
+                    throw new Error('Erro ao enviar formulário');
                 }
-
             } catch (error) {
-                // ERRO DE REDE/CORS
-                log('', 'info');
-                log('❌❌❌ ERRO NA REQUISIÇÃO ❌❌❌', 'error');
-                log(`Tipo: ${error.name}`, 'error');
-                log(`Mensagem: ${error.message}`, 'error');
-
-                resultados.innerHTML = `<div class="log-error">
-❌ ERRO: ${error.message}
-
-Tipo: ${error.name}
-                </div>`;
-
-                if (error.message.includes('Failed to fetch') || error.message.includes('NetworkError')) {
-                    log('', 'info');
-                    log('🔍 DIAGNÓSTICO: Problema de CORS ou Conectividade', 'warning');
-                    
-                    showStatus('❌ ERRO DE CORS / REDE', false);
-
-                    solucoes.innerHTML = `
-<div class="log-error">
-🔧 PROBLEMA IDENTIFICADO: CORS ou Conectividade
-
-SOLUÇÕES:
-
-1️⃣ CONFIGURAR CORS NO N8N:
-   - Abra o workflow
-   - Clique no nó "Webhook"
-   - Vá em "Options" → "Response Headers"
-   - Adicione:
-     {
-       "Access-Control-Allow-Origin": "*",
-       "Access-Control-Allow-Methods": "POST, OPTIONS",
-       "Access-Control-Allow-Headers": "Content-Type"
-     }
-
-2️⃣ VERIFICAR WORKFLOW:
-   - Workflow está ATIVO?
-   - URL está correta?
-
-3️⃣ TESTAR CONECTIVIDADE:
-   - Teste de outra rede (4G do celular)
-   - Verifique firewall/antivírus
-</div>
-                    `;
-                }
+                console.error('Error:', error);
+                
+                document.getElementById('loadingMessage').classList.remove('show');
+                document.getElementById('anamneseForm').style.display = 'block';
+                document.querySelector('.intro-text').style.display = 'block';
+                
+                const errorDiv = document.getElementById('errorMessage');
+                errorDiv.textContent = 'Erro ao enviar formulário. Por favor, tente novamente ou entre em contato via WhatsApp: (24) 99882-6028';
+                errorDiv.classList.add('show');
             }
-
-            log('', 'info');
-            log('═══════════════════════════════════════', 'info');
-            log('✅ DIAGNÓSTICO COMPLETO FINALIZADO', 'success');
-            log('═══════════════════════════════════════', 'info');
-            
-            testBtn.disabled = false;
-        }
-
-        // Log inicial
-        log('🔧 Sistema de diagnóstico carregado', 'success');
-        log('📝 Preencha os dados e clique em "EXECUTAR TESTE COMPLETO"', 'info');
+        });
     </script>
 </body>
 </html>
