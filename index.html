@@ -39,14 +39,16 @@
         }
 
         .logo-container {
-            max-width: 250px;
-            margin: 0 auto 30px;
+            max-width: 300px;
+            margin: 0 auto 40px;
             animation: fadeIn 1.2s ease-out;
+            padding: 20px;
         }
 
         .logo-container img {
             width: 100%;
             height: auto;
+            filter: drop-shadow(0 5px 15px rgba(0,0,0,0.1));
         }
 
         @keyframes fadeIn {
@@ -82,9 +84,9 @@
         }
 
         .hero-subtitle {
-            font-size: 1.3em;
+            font-size: 1.8em;
             margin-bottom: 40px;
-            color: var(--verde-sage);
+            color: var(--verde-escuro);
             font-weight: 300;
             animation: fadeInUp 1s ease-out 0.6s both;
         }
@@ -364,12 +366,12 @@
 
         /* Responsivo */
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2em;
+            .logo-container {
+                max-width: 220px;
             }
 
             .hero-subtitle {
-                font-size: 1.1em;
+                font-size: 1.3em;
             }
 
             h2 {
@@ -394,15 +396,10 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="logo-container">
-            <!-- Logo placeholder - você substituirá pela imagem 1 -->
-            <div style="background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-                <div style="font-size: 3em; color: var(--verde-sage);">🌿</div>
-                <div style="font-size: 2em; color: var(--verde-sage); letter-spacing: 3px; margin-top: 10px;">ANANDA</div>
-                <div style="font-size: 1.3em; color: var(--rose-suave); letter-spacing: 2px;">THERAPY</div>
-            </div>
+            <!-- Substitua "logo-ananda.png" pelo nome do arquivo da sua logo -->
+            <img src="logo-ananda.png" alt="Ananda Therapy Logo" style="width: 100%; max-width: 300px; height: auto; display: block; margin: 0 auto;">
         </div>
         <div class="hero-content">
-            <h1>Massoterapia & Bem-Estar</h1>
             <p class="hero-subtitle">Cada corpo é único. Cada resultado, também.</p>
             <a href="#conhecer" class="cta-button">Agende sua Sessão</a>
         </div>
