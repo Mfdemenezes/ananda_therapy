@@ -51,6 +51,31 @@
             filter: drop-shadow(0 5px 15px rgba(0,0,0,0.1));
         }
 
+        /* Seção do Vídeo */
+        .video-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+            animation: fadeIn 1.5s ease-out 0.3s both;
+        }
+
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            background: var(--branco);
+        }
+
+        .video-wrapper video {
+            width: 100%;
+            height: auto;
+            display: block;
+            max-height: 600px;
+            object-fit: contain;
+        }
+
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(-20px); }
             to { opacity: 1; transform: translateY(0); }
@@ -255,36 +280,40 @@
             background: rgba(255,255,255,0.1);
             border-radius: 15px;
             backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .exp-item:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-5px);
         }
 
         .exp-item h3 {
-            font-size: 1.5em;
-            margin-bottom: 10px;
-            font-weight: 300;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            font-weight: 400;
         }
 
         /* Sobre */
         .sobre {
             padding: 80px 20px;
             background: var(--bege-claro);
+            text-align: center;
         }
 
         .sobre-content {
             max-width: 800px;
             margin: 0 auto;
-            text-align: center;
         }
 
         .sobre-content p {
             font-size: 1.2em;
-            margin-bottom: 25px;
-            line-height: 1.8;
+            margin-bottom: 20px;
             font-weight: 300;
-            color: var(--texto-escuro);
+            line-height: 1.8;
         }
 
         .sobre-destaque {
-            font-weight: 400;
             color: var(--verde-escuro);
             font-size: 1.3em;
             margin: 30px 0;
@@ -370,6 +399,14 @@
                 max-width: 220px;
             }
 
+            .video-container {
+                max-width: 100%;
+            }
+
+            .video-wrapper video {
+                max-height: 400px;
+            }
+
             .hero-subtitle {
                 font-size: 1.3em;
             }
@@ -399,6 +436,17 @@
             <!-- Logo Ananda Therapy -->
             <img src="logo.png" alt="Ananda Therapy Logo" style="width: 100%; max-width: 300px; height: auto; display: block; margin: 0 auto;">
         </div>
+        
+        <!-- Seção do Vídeo -->
+        <div class="video-container">
+            <div class="video-wrapper">
+                <video controls autoplay muted loop playsinline>
+                    <source src="WhatsApp Video 2025-10-28 at 14.00.18.mp4" type="video/mp4">
+                    Seu navegador não suporta a reprodução de vídeos.
+                </video>
+            </div>
+        </div>
+
         <div class="hero-content">
             <p class="hero-subtitle">Cada corpo é único. Cada resultado, também.</p>
             <a href="https://n8n.mbam.com.br/form/d1c711c1-e978-49e4-be3e-654870ffb163" target="_blank" class="cta-button">Agende sua Sessão</a>
