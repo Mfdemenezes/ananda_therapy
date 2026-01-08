@@ -29,6 +29,113 @@
             background: var(--bege-claro);
         }
 
+        /* Menu fixo */
+        section {
+            scroll-margin-top: 90px;
+        }
+
+        .top-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--bege-medio);
+        }
+
+        .top-nav .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 14px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 18px;
+            flex-wrap: wrap;
+        }
+
+        .top-nav a {
+            color: var(--texto-escuro);
+            text-decoration: none;
+            font-weight: 300;
+            letter-spacing: 0.8px;
+            padding: 8px 14px;
+            border-radius: 999px;
+            transition: all 0.25s ease;
+        }
+
+        .top-nav a:hover {
+            background: var(--bege-claro);
+            color: var(--verde-escuro);
+        }
+
+        .top-nav a.nav-cta {
+            background: var(--verde-escuro);
+            color: var(--branco);
+            font-weight: 400;
+            letter-spacing: 0.6px;
+            box-shadow: 0 10px 25px rgba(107, 125, 104, 0.28);
+        }
+
+        .top-nav a.nav-cta:hover {
+            background: var(--verde-sage);
+            color: var(--branco);
+            transform: translateY(-1px);
+        }
+
+        .top-nav .nav-item {
+            position: relative;
+        }
+
+        .top-nav .nav-trigger {
+            appearance: none;
+            border: 0;
+            background: transparent;
+            color: var(--texto-escuro);
+            font: inherit;
+            font-weight: 300;
+            letter-spacing: 0.8px;
+            padding: 8px 14px;
+            border-radius: 999px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+        }
+
+        .top-nav .nav-trigger:hover {
+            background: var(--bege-claro);
+            color: var(--verde-escuro);
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: calc(100% + 10px);
+            left: 50%;
+            transform: translateX(-50%);
+            min-width: 220px;
+            padding: 10px;
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.98);
+            border: 1px solid var(--bege-medio);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+            display: none;
+        }
+
+        .nav-item[data-open="true"] .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 10px 12px;
+            border-radius: 12px;
+        }
+
+        .dropdown-menu a:hover {
+            background: var(--bege-claro);
+        }
+
         /* Hero Section */
         .hero {
             background: linear-gradient(135deg, var(--bege-medio) 0%, var(--bege-claro) 100%);
@@ -209,50 +316,6 @@
             display: block;
         }
 
-        /* Benefícios */
-        .beneficios {
-            padding: 80px 20px;
-            background: var(--branco);
-        }
-
-        .beneficios-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 40px;
-            margin-top: 50px;
-        }
-
-        .beneficio-card {
-            text-align: center;
-            padding: 40px 30px;
-            background: var(--bege-claro);
-            border-radius: 15px;
-            transition: all 0.3s ease;
-        }
-
-        .beneficio-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-
-        .beneficio-icon {
-            font-size: 3em;
-            margin-bottom: 20px;
-        }
-
-        .beneficio-card h3 {
-            color: var(--verde-escuro);
-            margin-bottom: 15px;
-            font-size: 1.4em;
-            font-weight: 400;
-        }
-
-        .beneficio-card p {
-            color: var(--texto-escuro);
-            font-weight: 300;
-            line-height: 1.7;
-        }
-
         /* Experiência Sensorial */
         .experiencia {
             padding: 80px 20px;
@@ -430,8 +493,29 @@
     </style>
 </head>
 <body>
+    <nav class="top-nav" aria-label="Menu principal">
+        <div class="nav-inner">
+            <a href="#inicio">Início</a>
+            <div class="nav-item" data-dropdown>
+                <button class="nav-trigger" type="button" aria-haspopup="true" aria-expanded="false">
+                    Terapias
+                </button>
+                <div class="dropdown-menu" role="menu" aria-label="Terapias">
+                    <a role="menuitem" href="terapias.html#relaxante">Relaxante</a>
+                    <a role="menuitem" href="terapias.html#drenagem">Drenagem linfática</a>
+                    <a role="menuitem" href="terapias.html#pedra">Pedra</a>
+                    <a role="menuitem" href="terapias.html#candle">Candle</a>
+                    <a role="menuitem" href="terapias.html#kinesio-tape">Kinesio Tape</a>
+                    <a role="menuitem" href="terapias.html#reflexologia-podal">Reflexologia podal</a>
+                </div>
+            </div>
+            <a href="quem-sou-eu.html">Quem sou eu?</a>
+            <a class="nav-cta" href="https://n8n.mbam.com.br/form/d1c711c1-e978-49e4-be3e-654870ffb163" target="_blank" rel="noopener noreferrer">Agende sua experiência</a>
+        </div>
+    </nav>
+
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" id="inicio">
         <div class="logo-container">
             <!-- Logo Ananda Therapy -->
             <img src="logo.png" alt="Ananda Therapy Logo" style="width: 100%; max-width: 300px; height: auto; display: block; margin: 0 auto;">
@@ -479,74 +563,35 @@
     </section>
 
     <!-- Experiência -->
-    <section class="experiencia">
+    <section class="experiencia" id="terapias">
         <div class="container">
             <h2>Tenha uma Experiência Sensorial Completa</h2>
             <div class="experiencia-grid">
                 <div class="exp-item">
-                    <h3>🪨 Pedras</h3>
+                    <h3>Pedras</h3>
                     <p>Terapia com pedras quentes para relaxamento profundo</p>
                 </div>
                 <div class="exp-item">
-                    <h3>🕯️ Aroma</h3>
+                    <h3>Aroma</h3>
                     <p>Óleos essenciais selecionados para cada necessidade</p>
                 </div>
                 <div class="exp-item">
-                    <h3>🌿 Ambiente</h3>
+                    <h3>Ambiente</h3>
                     <p>Espaço zen preparado para sua tranquilidade</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Benefícios -->
-    <section class="beneficios">
-        <div class="container">
-            <h2>Benefícios das Técnicas</h2>
-            <div class="beneficios-grid">
-                <div class="beneficio-card">
-                    <div class="beneficio-icon">💆‍♀️</div>
-                    <h3>Massagem Relaxante</h3>
-                    <p>Alívio de tensões musculares e relaxamento profundo do corpo e mente</p>
-                </div>
-                <div class="beneficio-card">
-                    <div class="beneficio-icon">💧</div>
-                    <h3>Drenagem Linfática</h3>
-                    <p>Menos inchaço, mais leveza. Estimula a circulação e elimina toxinas</p>
-                </div>
-                <div class="beneficio-card">
-                    <div class="beneficio-icon">🧠</div>
-                    <h3>Melhora da Concentração</h3>
-                    <p>A massagem pode melhorar sua concentração e clareza mental</p>
-                </div>
-                <div class="beneficio-card">
-                    <div class="beneficio-icon">😴</div>
-                    <h3>Qualidade do Sono</h3>
-                    <p>Promove um sono reparador e equilibra o sistema nervoso</p>
-                </div>
-                <div class="beneficio-card">
-                    <div class="beneficio-icon">🩸</div>
-                    <h3>Circulação Sanguínea</h3>
-                    <p>Melhora a circulação e oxigenação dos tecidos corporais</p>
-                </div>
-                <div class="beneficio-card">
-                    <div class="beneficio-icon">✨</div>
-                    <h3>Bem-Estar Integral</h3>
-                    <p>Equilíbrio completo entre corpo, mente e espírito</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Sobre -->
-    <section class="sobre">
+    <section class="sobre" id="quem-sou-eu">
         <div class="container">
             <div class="sobre-content">
                 <h2>Ananda Therapy</h2>
                 <p>Atendimento personalizado com técnicas de massoterapia que respeitam as necessidades individuais de cada pessoa.</p>
                 <p>Cada sessão é única e preparada especialmente para você, considerando seu histórico de saúde, objetivos e preferências.</p>
                 <p class="sobre-destaque">📍 Atendimento em Miguel Pereira e Região - RJ</p>
-                <p><strong>📱 WhatsApp:</strong> (24) 99882-6028</p>
+                <p><strong>📱 WhatsApp:</strong> <a href="https://wa.me/5524998826028" target="_blank" rel="noopener noreferrer">(24) 99882-6028</a></p>
                 <a href="https://www.instagram.com/ananda.therapy_/" target="_blank" class="instagram-link">
                     📷 @ananda.therapy_
                 </a>
@@ -555,7 +600,7 @@
     </section>
 
     <!-- CTA Final -->
-    <section class="cta-final" id="conhecer">
+    <section class="cta-final" id="agendar">
         <div class="container">
             <h2>Pronto para Transformar seu Bem-Estar?</h2>
             <p>Preencha nossa anamnese e agende sua primeira sessão</p>
@@ -567,12 +612,46 @@
     <!-- Footer -->
     <footer>
         <p><strong>Ananda Therapy</strong> - Massoterapia & Bem-Estar</p>
-        <p>📱 WhatsApp: (24) 99882-6028 | 📷 Instagram: @ananda.therapy_</p>
+        <p>📱 WhatsApp: <a href="https://wa.me/5524998826028" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">(24) 99882-6028</a> | 📷 Instagram: <a href="https://www.instagram.com/ananda.therapy_/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">@ananda.therapy_</a></p>
         <p>📍 Miguel Pereira e Região - Rio de Janeiro - Brasil</p>
         <p style="margin-top: 20px; font-size: 0.9em; opacity: 0.8;">© 2025 Ananda Therapy. Todos os direitos reservados.</p>
     </footer>
 
     <script>
+        // Dropdown (Terapias)
+        (function () {
+            const dropdown = document.querySelector('[data-dropdown]');
+            if (!dropdown) return;
+
+            const trigger = dropdown.querySelector('.nav-trigger');
+            const menu = dropdown.querySelector('.dropdown-menu');
+
+            function setOpen(open) {
+                dropdown.setAttribute('data-open', open ? 'true' : 'false');
+                trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
+            }
+
+            setOpen(false);
+
+            trigger.addEventListener('click', (e) => {
+                e.preventDefault();
+                const isOpen = dropdown.getAttribute('data-open') === 'true';
+                setOpen(!isOpen);
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!dropdown.contains(e.target)) setOpen(false);
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') setOpen(false);
+            });
+
+            menu.querySelectorAll('a').forEach((a) => {
+                a.addEventListener('click', () => setOpen(false));
+            });
+        })();
+
         // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
